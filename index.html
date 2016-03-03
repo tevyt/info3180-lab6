@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+	<body ng-app="myApp">
+		<div class="container" ng-controller="MainCtrl">
+			<ul>
+				<li ng-repeat="product in products">{{product}}<span ng-click="removeItem()"><i class="glyphicon glyphicon-remove"></i></span></li>
+			</ul>
+
+			<input ng-model="addMe">
+			<button ng-click="addItem()">Add</button>
+			<p>{{errorText}}</p>
+		</div>
+	</body>
+</html>
+
